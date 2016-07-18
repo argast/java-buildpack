@@ -78,6 +78,7 @@ module JavaBuildpack
       # @param [Pathname, String] value the value of the system property
       # @return [JavaOpts]              +self+ for chaining
       def add_system_property(key, value)
+        puts ">>>>>>>>>>>>>>>>>>>>>>>>>>"
         add_preformatted_options "-D#{key}=#{qualify_value(value)}"
       end
 

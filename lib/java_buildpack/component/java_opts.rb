@@ -78,7 +78,7 @@ module JavaBuildpack
       # @param [Pathname, String] value the value of the system property
       # @return [JavaOpts]              +self+ for chaining
       def add_system_property(key, value)
-        add_preformatted_options "-D#{key}=#{qualify_value(value)}"
+        add_preformatted_options "aa #{value} aa -D#{key}=#{qualify_value(value)}"
       end
 
       # Adds an option to the +JAVA_OPTS+. Nothing is prepended to the key.  If the value is a +Pathname+, then
